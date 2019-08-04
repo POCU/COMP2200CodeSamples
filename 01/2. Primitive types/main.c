@@ -12,5 +12,5 @@ int main(void)
     printf("Float Type Value: %f\n", decimal);
     printf("Char Type Value: %c\n", letter);
 
-	return 0;
+    return 0;
 }
