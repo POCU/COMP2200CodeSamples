@@ -8,7 +8,7 @@ int main()
 	char letter = 'A';
 
 	printf("int type value: %d\n", integer1);
-	printf("long type value: %l\n", integer2);
+	printf("long type value: %ld\n", integer2);
 	printf("float type value: %f\n", decimal);
 	printf("char type value: %c\n", letter);
 
