@@ -1,34 +1,32 @@
 #include <stdio.h>
 
-enum eChamp
-{
-	ZED,
-	JAX,
-	VAYNE,
-	LULU,
-	LEESIN
+enum champ {
+    CHAMP_ZED,
+    CHAMP_JAX,
+    CHAMP_VAYNE,
+    CHAMP_LULU,
+    CHAMP_LEESIN
 };
 
-enum eRole
-{
-	TOP,
-	MID,
-	JUNGLE,
-	BOTTOM,
-	SUPPORTER
+enum role {
+    ROLE_TOP,
+    ROLE_MID,
+    ROLE_JUNGLE,
+    ROLE_BOTTOM,
+    ROLE_SUPPORTER
 };
 
-int main()
+int main(void)
 {
-	enum eChamp myChamp = VAYNE;
-	enum eRole myRole = BOTTOM;
+    enum champ my_champ = CHAMP_VAYNE;
+    enum role my_role = ROLE_BOTTOM;
 
-	printf("my role: %d\n", myRole);
-	printf("my champion: %d\n", myChamp);
-	printf("\n");
+    printf("My Role: %d\n", my_role);
+    printf("My Champion: %d\n", my_champ);
+    printf("\n");
 
-	myRole = LEESIN;
-	printf("my role: %d\n", myRole);
+    my_role = CHAMP_LEESIN;
+    printf("My Role: %d\n", my_role);
 
-	return 0;
+    return 0;
 }

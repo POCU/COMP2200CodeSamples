@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-int x = 100;
+int g_x = 100;
 
-void IncreaseNumber()
+void increase_number(void)
 {
-	int y = 200;
-	y += 100;
-	x += 100;
+    int y = 200;
+    y += 100;
+    g_x += 100;
 }
 
-int main()
+int main(void)
 {
-	printf("%d\n", x);
-	IncreaseNumber();
-	printf("%d\n", x);
-	printf("%d\n", y);
-	return 0;
+    printf("Value Of Global Variable: %d\n", g_x);
+    increase_number();
+    printf("Value Of Global Variable: %d\n", g_x);
+    /*printf("Value Of Local Variable: %d\n", y);*/
+    return 0;
 }

@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-	int integer1 = 10;
-	long integer2 = 100;
-	float decimal = 1.5f;
-	char letter = 'A';
+    int integer_1 = 10;
+    long integer_2 = 100;
+    float decimal = 1.5f;
+    char letter = 'A';
 
-	printf("int type value: %d\n", integer1);
-	printf("long type value: %ld\n", integer2);
-	printf("float type value: %f\n", decimal);
-	printf("char type value: %c\n", letter);
+    printf("Int Type Value: %d\n", integer_1);
+    printf("Long Type Value: %ld\n", integer_2);
+    printf("Float Type Value: %f\n", decimal);
+    printf("Char Type Value: %c\n", letter);
 
 	return 0;
 }
