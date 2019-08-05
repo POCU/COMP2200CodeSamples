@@ -12,7 +12,7 @@ int main(void)
         break;
     case 2:
         printf("Case 2\n");
-		break;
+        break;
     case 3:
         printf("Case 3\n");
     default:
