@@ -6,10 +6,10 @@ int main(void)
     switch (x) {
     case 0:
         printf("Case 0\n");
-		break;
+        break;
     case 1:
         printf("Case 1\n");
-		break;
+        break;
     case 2:
         printf("Case 2\n");
 		break;
