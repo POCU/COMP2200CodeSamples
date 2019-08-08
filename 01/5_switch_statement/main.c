@@ -16,7 +16,7 @@ int main(void)
     case 3:
         printf("Case 3\n");
     default:
-        printf("default case\n");
+        printf("Default case\n");
     }
 
     return 0;

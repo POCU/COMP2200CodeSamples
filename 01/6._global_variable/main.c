@@ -11,9 +11,9 @@ void increase_number(void)
 
 int main(void)
 {
-    printf("Value Of Global Variable: %d\n", g_x);
+    printf("g_x: %d\n", g_x);
     increase_number();
-    printf("Value Of Global Variable: %d\n", g_x);
-    /*printf("Value Of Local Variable: %d\n", y);*/
+    printf("g_x: %d\n", g_x);
+    /*printf("y: %d\n", y);*/
     return 0;
 }

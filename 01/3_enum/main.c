@@ -21,12 +21,12 @@ int main(void)
     enum champ my_champ = CHAMP_VAYNE;
     enum role my_role = ROLE_BOTTOM;
 
-    printf("My Role: %d\n", my_role);
-    printf("My Champion: %d\n", my_champ);
+    printf("my_role: %d\n", my_role);
+    printf("my_champ: %d\n", my_champ);
     printf("\n");
 
     my_role = CHAMP_LEESIN;
-    printf("My Role: %d\n", my_role);
+    printf("my_role: %d\n", my_role);
 
     return 0;
 }
