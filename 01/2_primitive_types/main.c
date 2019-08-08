@@ -7,10 +7,10 @@ int main(void)
     float decimal = 1.5f;
     char letter = 'A';
 
-    printf("Int Type Value: %d\n", integer_1);
-    printf("Long Type Value: %ld\n", integer_2);
-    printf("Float Type Value: %f\n", decimal);
-    printf("Char Type Value: %c\n", letter);
+    printf("integer_1: %d\n", integer_1);
+    printf("integer_2: %ld\n", integer_2);
+    printf("decimal: %f\n", decimal);
+    printf("letter: %c\n", letter);
 
     return 0;
 }
