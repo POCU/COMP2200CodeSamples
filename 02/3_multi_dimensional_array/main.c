@@ -14,7 +14,7 @@ int main(void)
     }
     average /= i * j;
 
-    printf("Average Of all grades: %d\n", average);
+    printf("Average of all grades: %d\n", average);
 
     return 0;
 }
