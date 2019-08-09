@@ -2,15 +2,15 @@
 
 int main(void)
 {
-    int integer_1 = 10;
-    long integer_2 = 100;
-    float decimal = 1.5f;
-    char letter = 'A';
+    int int_value = 10;
+    long long_value = 100;
+    float float_value = 1.5f;
+    char char_value = 'A';
 
-    printf("integer_1: %d\n", integer_1);
-    printf("integer_2: %ld\n", integer_2);
-    printf("decimal: %f\n", decimal);
-    printf("letter: %c\n", letter);
+    printf("int_value: %d\n", int_value);
+    printf("long_value: %ld\n", long_value);
+    printf("float_value: %f\n", float_value);
+    printf("char_value: %c\n", char_value);
 
     return 0;
 }
