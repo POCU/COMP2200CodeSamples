@@ -15,8 +15,10 @@ int main(void)
         break;
     case 3:
         printf("Case 3\n");
+        /* intentional fallthrough */
     default:
         printf("Default case\n");
+        break;
     }
 
     return 0;
