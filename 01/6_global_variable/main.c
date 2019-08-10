@@ -13,7 +13,7 @@ int main(void)
 {
     printf("g_x: %d\n", g_x); /* 100 */
     increase_number();
-    printf("g_x: %d\n", g_x); /* 101 */
+    printf("g_x: %d\n", g_x); /* 200 */
     /* below does not compile */
     /*printf("y: %d\n", y);*/
 
