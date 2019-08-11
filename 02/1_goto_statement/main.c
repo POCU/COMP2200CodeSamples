@@ -20,16 +20,16 @@ int avoid_this_goto_statement(void)
 
 int use_this_goto_statement(void)
 {
-	int x;
+    int x;
     int y;
 
     for (x = 0; x < 5; ++x) {
         for (y = 0; y < 5; ++y) {
             if (x == 2 && y == 2) {
                 goto end;
-			}
-		}
-	}
+            }
+        }
+    }
 
     end:
         return 0;
