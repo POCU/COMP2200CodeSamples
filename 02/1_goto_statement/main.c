@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int bad_goto_statement_example(void)
+int avoid_this_goto_statement(void)
 {
     int x = 5;
     goto begin;
-	
+
     end:
         return 0;
 
@@ -15,31 +15,30 @@ int bad_goto_statement_example(void)
             if (x == 0) {
                 goto end;
             }
-        }		
+        }
 }
 
-int good_goto_statement_example(void)
+int use_this_goto_statement(void)
 {
-    int y = 5;
-	goto begin;
-	
-    begin:
-        while (1) {
-            --y;
+	int x;
+    int y;
 
-            if (y == 0) {
+    for (x = 0; x < 5; ++x) {
+        for (y = 0; y < 5; ++y) {
+            if (x == 2 && y == 2) {
                 goto end;
-		    }
-        }
+			}
+		}
+	}
 
     end:
-        return 0;	
+        return 0;
 }
 
 int main(void)
 {
-    bad_goto_statement_example();
-    good_goto_statement_example();
+    avoid_this_goto_statement();
+    use_this_goto_statement();
 
     return 0;
 }

@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int grades[2][3] = {{65, 90, 75}, {70, 40, 50}};
+    int grades[2][3] = {{ 65, 90, 75 }, { 70, 40, 50 }};
     int average = 0;
     int i;
     int j;
