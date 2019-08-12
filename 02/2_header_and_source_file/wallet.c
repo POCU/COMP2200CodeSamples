@@ -11,10 +11,10 @@ void put_in_money(void)
 
 void take_out_money(void)
 {
-	if (g_dollars != 0) {
+    if (g_dollars != 0) {
         g_dollars -= 10;
-	}
-	if (g_cents > 0.0f) {
+    }
+    if (g_cents > 0.0f) {
         g_cents -= 0.25f;
-	}
+    }
 }
