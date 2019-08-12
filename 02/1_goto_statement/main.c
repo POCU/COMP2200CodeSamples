@@ -5,17 +5,17 @@ int avoid_this_goto_statement(void)
     int x = 5;
     goto begin;
 
-    end:
-        return 0;
+end:
+    return 0;
 
-    begin:
-        while (1) {
-            --x;
+begin:
+    while (1) {
+        --x;
 
-            if (x == 0) {
-                goto end;
-            }
+        if (x == 0) {
+            goto end;
         }
+    }
 }
 
 int use_this_goto_statement(void)
@@ -31,8 +31,8 @@ int use_this_goto_statement(void)
         }
     }
 
-    end:
-        return 0;
+end:
+    return 0;
 }
 
 int main(void)

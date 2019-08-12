@@ -2,7 +2,10 @@
 
 int main(void)
 {
-    int grades[2][3] = {{ 65, 90, 75 }, { 70, 40, 50 }};
+    int grades[2][3] = {
+    { 65, 90, 75 }, 
+    { 70, 40, 50 }
+    };
     int average = 0;
     int i;
     int j;
@@ -12,9 +15,9 @@ int main(void)
             average += grades[i][j];
         }
     }
-    average /= i * j;
+    average /= (i * j);
 
-    printf("Average of all grades: %d\n", average);
+    printf("Average: %d\n", average);
 
     return 0;
 }

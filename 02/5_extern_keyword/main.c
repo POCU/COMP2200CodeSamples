@@ -1,18 +1,27 @@
 #include <stdio.h>
 
-#include "external_file.h"
+#include "minion.h"
+
+extern unsigned int g_hp;
+extern unsigned int g_strength;
 
 int main(void)
 {
-    printf("g_extern_var: %d\n", g_extern_var); /* 0 */
+    printf("Normal minion:\n");
+    printf("hp: %u\n", g_hp);               /* 100 */
+    printf("strength: %u\n", g_strength);   /* 10 */
     /* below does not compile */
-    /*printf("g_var: %d\n", g_var);*/
+    /*printf("gold: %u\n", g_gold);*/       /* 15 */
 
-    increase_value();
+    printf("\n");
 
-    printf("g_extern_var: %d\n", g_extern_var); /* 100 */
+    strengthen_minion();
+
+    printf("Strengthened minion:\n");
+    printf("hp: %u\n", g_hp);               /* 150 */
+    printf("strength: %u\n", g_strength);   /* 30 */
     /* below does not compile */
-    /*printf("g_var: %d\n", g_var);*/
+    /*printf("gold: %u\n", g_gold);*/       /* 25 */
 
     return 0;
 }
