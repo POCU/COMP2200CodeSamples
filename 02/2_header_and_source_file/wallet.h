@@ -1,10 +1,7 @@
 #ifndef WALLET_H
 #define WALLET_H
 
-int g_dollars;
-float g_cents;
-
-void put_in_money(void);
-void take_out_money(void);
+void deposit(unsigned int dollars, float cents);
+void withdraw(unsigned int dollars, float cents);
 
 #endif /* WALLET_H */

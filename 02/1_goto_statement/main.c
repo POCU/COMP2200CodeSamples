@@ -1,44 +1,57 @@
 #include <stdio.h>
 
-int avoid_this_goto_statement(void)
+void calculate_factorial(const int n)
 {
-    int x = 5;
-    goto begin;
+    int result = n;
+    int i = n - 1;
+    goto begin_loop;
 
-end:
-    return 0;
+exit_loop:
+    printf("%d factorial: %d\n", n, result);
+    return;
 
-begin:
+begin_loop:
     while (1) {
-        --x;
+        result *= i;
+        --i;
 
-        if (x == 0) {
-            goto end;
+        if (i <= 1) {
+            goto exit_loop;
         }
     }
 }
 
-int use_this_goto_statement(void)
+void find_number_in_2d_array(int arr[3][3], const int n)
 {
-    int x;
-    int y;
+    size_t i;
+    size_t j;
 
-    for (x = 0; x < 5; ++x) {
-        for (y = 0; y < 5; ++y) {
-            if (x == 2 && y == 2) {
-                goto end;
+    for (i = 0; i < 3; ++i) {
+        for (j = 0; j < 3; ++j) {
+            if (arr[i][j] == n) {
+                goto exit_loop;
             }
         }
     }
+    /* if n is not found in arr, terminates the function */
+    printf("Number not found");
+    return;
 
-end:
-    return 0;
+exit_loop:
+    printf("Number: %d\n", n);
+    printf("Location: (%zu, %zu)\n", i, j);
 }
 
 int main(void)
 {
-    avoid_this_goto_statement();
-    use_this_goto_statement();
-
+    int square_matrix[3][3] = {
+        { 0, 1, 2 },
+        { 3, 4, 5 },
+        { 6, 7, 8 }
+    };
+    
+    calculate_factorial(3);
+    find_number_in_2d_array(square_matrix, 0);
+    
     return 0;
 }

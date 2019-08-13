@@ -15,9 +15,10 @@ int main(void)
 
     printf("\n");
 
-    strengthen_minion();
+    go_berserk();
+    add_gold(10u);
 
-    printf("Strengthened minion:\n");
+    printf("Berserk minion:\n");
     printf("hp: %u\n", g_hp);               /* 150 */
     printf("strength: %u\n", g_strength);   /* 30 */
     /* below does not compile */
