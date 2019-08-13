@@ -33,13 +33,12 @@ void find_number_in_2d_array(int arr[3][3], const int n)
             }
         }
     }
-    /* if n is not found in arr, terminates the function */
+    /* if n is not found in arr */
     printf("Number not found");
-    return;
 
 exit_loop:
     printf("Number: %d\n", n);
-    printf("Location: (%zu, %zu)\n", i, j);
+    printf("Index positions: (%zu, %zu)\n", i, j);
 }
 
 int main(void)
