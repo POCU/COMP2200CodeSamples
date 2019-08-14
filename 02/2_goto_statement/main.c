@@ -2,23 +2,23 @@
 
 void calculate_factorial(const unsigned int n)
 {
-	unsigned int result = 1;
-	unsigned int i = 1;
+    unsigned int result = 1;
+    unsigned int i = 1;
 
-	goto begin_loop;
+    goto begin_loop;
 
-	/* this is a bad practice */
+    /* this is a bad practice */
 exit_loop:
-	printf("%d factorial: %d\n", n, result);
-	return;
+    printf("%d factorial: %d\n", n, result);
+    return;
 
 begin_loop:
-	while (i <= n) {
-		result *= i;
-		++i;
-	}
+    while (i <= n) {
+        result *= i;
+        ++i;
+    }
 
-	goto exit_loop;
+    goto exit_loop;
 }
 
 void find_number(int arr[3][3], const int n)
