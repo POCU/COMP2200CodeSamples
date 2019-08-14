@@ -1,8 +1,11 @@
 #include <stdio.h>
 
+#define NUM_CLASSES (2)
+#define NUM_SUBJECTS (3)
+
 int main(void)
 {
-    int grades[2][3] = {
+    int grades[NUM_CLASSES][NUM_SUBJECTS] = {
         { 65, 90, 75 }, 
         { 70, 40, 50 }
     };
@@ -10,8 +13,8 @@ int main(void)
     int i;
     int j;
 
-    for (i = 0; i < 2; ++i) {
-        for (j = 0; j < 3; ++j) {
+    for (i = 0; i < NUM_CLASSES; ++i) {
+        for (j = 0; j < NUM_SUBJECTS; ++j) {
             average += grades[i][j];
         }
     }

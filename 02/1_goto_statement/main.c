@@ -4,8 +4,10 @@ void calculate_factorial(const int n)
 {
     int result = n;
     int i = n - 1;
+
     goto begin_loop;
 
+/* this is a bad practice */
 exit_loop:
     printf("%d factorial: %d\n", n, result);
     return;
@@ -21,7 +23,7 @@ begin_loop:
     }
 }
 
-void find_number_in_2d_array(int arr[3][3], const int n)
+void find_number(int arr[3][3], const int n)
 {
     size_t i;
     size_t j;
@@ -64,8 +66,8 @@ int main(void)
     };
     
     calculate_factorial(3);
-    find_number_in_2d_array(square_matrix, 0);
-    find_number_in_2d_array(square_matrix, -1);
+    find_number(square_matrix, 0);
+    find_number(square_matrix, -1);
     
     return 0;
 }
