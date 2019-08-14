@@ -1,26 +1,24 @@
 #include <stdio.h>
 
-void calculate_factorial(const int n)
+void calculate_factorial(const unsigned int n)
 {
-    int result = n;
-    int i = n - 1;
+	unsigned int result = 1;
+	unsigned int i = 1;
 
-    goto begin_loop;
+	goto begin_loop;
 
-/* this is a bad practice */
+	/* this is a bad practice */
 exit_loop:
-    printf("%d factorial: %d\n", n, result);
-    return;
+	printf("%d factorial: %d\n", n, result);
+	return;
 
 begin_loop:
-    while (1) {
-        result *= i;
-        --i;
+	while (i <= n) {
+		result *= i;
+		++i;
+	}
 
-        if (i <= 1) {
-            goto exit_loop;
-        }
-    }
+	goto exit_loop;
 }
 
 void find_number(int arr[3][3], const int n)
@@ -65,7 +63,7 @@ int main(void)
         { 6, 7, 8 }
     };
     
-    calculate_factorial(3);
+    calculate_factorial(4);
     find_number(square_matrix, 0);
     find_number(square_matrix, -1);
     
