@@ -3,10 +3,11 @@
 
 #include "algorithm.h"
 
+#define LENGTH (5)
+
 int main(void)
 {
-    const int nums[5] = { 3, 10, 9, 8, 7 };
-    const size_t LENGTH = 5u;
+    const int nums[LENGTH] = { 3, 10, 9, 8, 7 };
     int min;
     int max;
 

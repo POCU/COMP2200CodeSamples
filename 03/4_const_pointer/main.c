@@ -17,7 +17,8 @@ int main(void)
 
 void add_vec3(const int* v1, const int* v2, int* out_v3)
 {
-    *out_v3 = *v1 + *v2;
-    *(out_v3 + 1) = *(v1 + 1) + *(v2 + 1);
-    *(out_v3 + 2) = *(v1 + 2) + *(v2 + 2);
+    size_t i = 0;
+    for (i = 0 ; i < 3; ++i) {
+        *out_v3++ = *v1++ + *v2++;
+    }
 }
