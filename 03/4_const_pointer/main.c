@@ -4,9 +4,9 @@
 
 int main(void)
 {
-    const int v1[3] = {1, 2, 3};
-    const int v2[3] = {1, 2, 8};
-    int v3[3];
+    const int v1[VECTOR_LENGTH] = {1, 2, 3};
+    const int v2[VECTOR_LENGTH] = {1, 2, 8};
+    int v3[VECTOR_LENGTH];
     
     add_vec3(v1, v2, v3);
     
@@ -18,7 +18,7 @@ int main(void)
 void add_vec3(const int* v1, const int* v2, int* out_v3)
 {
     size_t i = 0;
-    for (i = 0 ; i < 3; ++i) {
+    for (i = 0 ; i < VECTOR_LENGTH; ++i) {
         *out_v3++ = *v1++ + *v2++;
     }
 }
