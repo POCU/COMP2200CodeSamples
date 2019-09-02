@@ -11,7 +11,7 @@ int main(void)
     }
     printf("\n");
     
-    printf("NUM in hex form:%x", NUM);
+    printf("NUM in hex form: %x", NUM);
     
     return 0;
 }
