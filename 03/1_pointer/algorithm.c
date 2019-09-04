@@ -1,3 +1,4 @@
+#include <assert.h>
 #include "algorithm.h"
 
 /* pre-condition: length >= 1 */
