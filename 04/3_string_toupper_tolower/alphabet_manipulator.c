@@ -14,6 +14,7 @@ int to_upper(int c)
     
     return c;
 }
+
 int to_lower(int c)
 {
     if (is_alpha(c) && c <= UPPER_Z_ASCII) {
