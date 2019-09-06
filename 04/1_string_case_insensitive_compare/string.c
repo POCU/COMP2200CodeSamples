@@ -13,7 +13,7 @@ int string_case_insensitive_compare(const char* str0, const char* str1)
         ++str1;
     }
 
-    if (c1 - c2 == 0) {
+    if (c1 == c2) {
         return 0;
     }
 
