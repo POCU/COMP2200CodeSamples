@@ -10,9 +10,9 @@ int main(void)
     const float GB_SIZE = DIFF * MB_SIZE;
     const double TB_SIZE = DIFF * GB_SIZE;
     const double PB_SIZE = DIFF * TB_SIZE;
-    
+
     printf("Byte size: %d bits\n", BYTE_SIZE);                    /* 8 bits*/
-    
+
     printf("KB size: %d bytes \t", DIFF);                         /* 1024 bytes */
     printf("(%.0f bytes / %3.2e bytes)\n", KB_SIZE, KB_SIZE);     /* (1024 bytes / 1.02e+03 bytes) */
 
