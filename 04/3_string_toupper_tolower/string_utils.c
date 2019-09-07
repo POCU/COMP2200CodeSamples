@@ -9,7 +9,7 @@ int is_alpha(int c)
 int to_upper(int c)
 {
     if (is_alpha(c) && c >= 'a') {
-        return c ^ ('a' ^ 'A');
+        return c & ~0x20;
     }
 
     return c;
@@ -18,7 +18,7 @@ int to_upper(int c)
 int to_lower(int c)
 {
     if (is_alpha(c) && c <= 'Z') {
-        return c | ('a' ^ 'A');
+        return c | 0x20;
     }
 
     return c;
@@ -26,16 +26,16 @@ int to_lower(int c)
 
 void string_toupper(char* str)
 {
-    char c;
-    while ((c = *str) != '\0') {
-        *str++ = to_upper(c);
+    while (*str != '\0') {
+        *str = to_upper(*str);
+        ++str;
     }
 }
 
 void string_tolower(char* str)
 {
-    char c;
-    while ((c = *str) != '\0') {
-        *str++ = to_lower(c);
+    while (*str != '\0') {
+        *str = to_lower(*str);
+        ++str;
     }
 }

@@ -3,24 +3,24 @@
 
 #include "buffered_print.h"
 
-#define BUFFER_LENGTH (32)
+#define BUFFER_LENGTH (16)
 
-static int s_buffer_next_index = 0;
+static int s_buffer_chars = 0;
 static char s_buffer[BUFFER_LENGTH];
 
-void buffered_print(const char* src, size_t num)
+void buffered_print(const char* src)
 {
-    if (s_buffer_next_index == BUFFER_LENGTH) {
-        printf("The buffer is full:\n%s\n", s_buffer);
-        s_buffer_next_index = 0;
+    if (s_buffer_chars == BUFFER_LENGTH - 1) {
+        printf("%s\n", s_buffer);
+        s_buffer_chars = 0;
     }
 
-    if (s_buffer_next_index == 0) {
-        strncpy(s_buffer, src, num);
+    if (s_buffer_chars == 0) {
+        strncpy(s_buffer, src, BUFFER_LENGTH - 1);
+        s_buffer[BUFFER_LENGTH - 1] = '\0';
     } else {
-        strncat(s_buffer, src, num);
+        strncat(s_buffer, src, BUFFER_LENGTH - s_buffer_chars - 1);
     }
 
-    s_buffer[BUFFER_LENGTH - 1] = '\0';
-    s_buffer_next_index = strlen(s_buffer) + 1;
+    s_buffer_chars = strlen(s_buffer);
 }
