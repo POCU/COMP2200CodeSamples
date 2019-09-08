@@ -2,16 +2,16 @@
 
 #include "print_data_units.h"
 
-static const double S_SCALE = 1024.0f;
+#define S_SCALE (1024.0f)
 
-static const double S_BYTE = 1.0f;
-static const double S_KB = S_SCALE;
-static const double S_MB = S_SCALE * S_KB;
-static const double S_GB = S_SCALE * S_MB;
-static const double S_TB = S_SCALE * S_GB;
-static const double S_PB = S_SCALE * S_TB;
+#define S_BYTE (1.0f)
+#define S_KB (S_SCALE)
+#define S_MB (S_SCALE * S_KB)
+#define S_GB (S_SCALE * S_MB)
+#define S_TB (S_SCALE * S_GB)
+#define S_PB (S_SCALE * S_TB)
 
-void print_data_units(void)
+void print_byte_conversion_chart(void)
 {
     double divisor = 1.0f;
 
@@ -52,7 +52,7 @@ void print_data_units(void)
         S_GB / divisor, S_TB / divisor, S_PB / divisor);
 }
 
-void print_data_units_scientific_notation(void)
+void print_byte_conversion_chart_scientific(void)
 {
     double divisor = 1.0f;
 

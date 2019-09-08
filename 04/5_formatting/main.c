@@ -4,11 +4,11 @@
 
 int main(void)
 {
-    print_data_units();
+    print_byte_conversion_chart();
 
     printf("\n");
 
-    print_data_units_scientific_notation();
+    print_byte_conversion_chart_scientific();
 
     return 0;
 }

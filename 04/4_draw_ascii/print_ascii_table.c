@@ -12,9 +12,9 @@ void print_ascii_table(void)
 
     char i;
 
-    printf("Dec Hex  Chr\t");
-    printf("Dec Hex  Chr\t");
-    printf("Dec Hex  Chr\n");
+    printf("Dec Hex  Char\t");
+    printf("Dec Hex  Char\t");
+    printf("Dec Hex  Char\n");
 
     for (i = MIN_PRINTABLE_ASCII; i <= PRINTABLE_ASCII_ROW_END; ++i) {
         printf("%03d %#X %c\t", i, i, i);

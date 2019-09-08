@@ -8,7 +8,7 @@ int is_alpha(int c)
 
 int to_upper(int c)
 {
-    if (is_alpha(c) && c >= 'a') {
+    if (is_alpha(c)) {
         return c & ~0x20;
     }
 
@@ -17,7 +17,7 @@ int to_upper(int c)
 
 int to_lower(int c)
 {
-    if (is_alpha(c) && c <= 'Z') {
+    if (is_alpha(c)) {
         return c | 0x20;
     }
 
