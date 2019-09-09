@@ -3,29 +3,45 @@
 
 #include "buffered_print.h"
 
-#define BUFFER_LENGTH (16)
+#define BUFFER_LENGTH (32)
 
-static size_t s_buffer_index = 0;
+static size_t s_buffer_index = 0u;
 static char s_buffer[BUFFER_LENGTH];
+
+static int min(int a, int b);
 
 void buffered_print(const char* src)
 {
-    while (*src != '\0') {
+    size_t num_left;
+    const char* P = src;
 
-        if (s_buffer_index == 0) {
-            strncpy(s_buffer, src, BUFFER_LENGTH - 1);
-            s_buffer[BUFFER_LENGTH - 1] = '\0';
-            src += strlen(s_buffer);
+    num_left = strlen(src);
+
+    while (num_left > 0) {
+        const size_t NUM_CHARS_TO_BUFFER = min(BUFFER_LENGTH - 1 - s_buffer_index, num_left);
+
+        const int BUFFER_EMPTY = s_buffer_index == 0;
+
+        s_buffer_index += NUM_CHARS_TO_BUFFER;
+        num_left -= NUM_CHARS_TO_BUFFER;
+
+        if (BUFFER_EMPTY) {
+            strncpy(s_buffer, P, NUM_CHARS_TO_BUFFER);
+            s_buffer[s_buffer_index] = '\0';  
         } else {
-            strncat(s_buffer, src, BUFFER_LENGTH - s_buffer_index);
-            src += strlen(s_buffer) - (s_buffer_index - 1);
+            strncat(s_buffer, P, NUM_CHARS_TO_BUFFER);
         }
 
-        s_buffer_index = strlen(s_buffer) + 1;
+        P += NUM_CHARS_TO_BUFFER;
 
-        if (s_buffer_index == BUFFER_LENGTH) {
+        if (s_buffer_index == BUFFER_LENGTH - 1) {
             printf("%s\n", s_buffer);
             s_buffer_index = 0;
         }
     }
+}
+
+static int min(int a, int b)
+{
+    return a < b ? a : b;
 }
