@@ -8,8 +8,6 @@
 static size_t s_buffer_index = 0u;
 static char s_buffer[BUFFER_LENGTH];
 
-static int min(int a, int b);
-
 void buffered_print(const char* src)
 {
     size_t num_left;
@@ -18,7 +16,9 @@ void buffered_print(const char* src)
     num_left = strlen(src);
 
     while (num_left > 0) {
-        const size_t NUM_CHARS_TO_BUFFER = min(BUFFER_LENGTH - 1 - s_buffer_index, num_left);
+        const size_t NUM_CHARS_TO_BUFFER = 
+            BUFFER_LENGTH - 1 - s_buffer_index < num_left ?
+            BUFFER_LENGTH - 1 - s_buffer_index : num_left;
 
         const int BUFFER_EMPTY = s_buffer_index == 0;
 
@@ -39,9 +39,4 @@ void buffered_print(const char* src)
             s_buffer_index = 0;
         }
     }
-}
-
-static int min(int a, int b)
-{
-    return a < b ? a : b;
 }
