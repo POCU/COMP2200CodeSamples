@@ -16,25 +16,25 @@ void buffered_print(const char* src)
     num_left = strlen(src);
 
     while (num_left > 0) {
-        size_t num_chars_to_buffer = BUFFER_LENGTH - 1 - s_buffer_index;
+        size_t copy_count = BUFFER_LENGTH - 1 - s_buffer_index;
 
         const int buffer_empty = s_buffer_index == 0;
 
-        if (num_left < num_chars_to_buffer) {
-            num_chars_to_buffer = num_left;
+        if (num_left < copy_count) {
+            copy_count = num_left;
         }
 
-        s_buffer_index += num_chars_to_buffer;
-        num_left -= num_chars_to_buffer;
+        s_buffer_index += copy_count;
+        num_left -= copy_count;
 
         if (buffer_empty) {
-            strncpy(s_buffer, p, num_chars_to_buffer);
+            strncpy(s_buffer, p, copy_count);
             s_buffer[s_buffer_index] = '\0';  
         } else {
-            strncat(s_buffer, p, num_chars_to_buffer);
+            strncat(s_buffer, p, copy_count);
         }
 
-        p += num_chars_to_buffer;
+        p += copy_count;
 
         if (s_buffer_index == BUFFER_LENGTH - 1) {
             printf("%s\n", s_buffer);
