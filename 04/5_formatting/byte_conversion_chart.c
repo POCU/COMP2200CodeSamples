@@ -30,7 +30,7 @@ void print_byte_conversion_chart(void)
     printf("\n%4s", "");
 
     for (i = 0; i < LENGTH; ++i) {
-        printf("%s %17.15lf %17.12lf %17.9lf %17.6lf %17.3lf %17.0lf\n",
+        printf("%s %17.15f %17.12f %17.9f %17.6f %17.3f %17.0f\n",
             DATA_STORAGE_NAMES[i], BYTE / divisor, KB / divisor, 
             MB / divisor, GB / divisor, TB / divisor, PB / divisor);
 
