@@ -36,7 +36,8 @@ int main(void)
 
     write_match_history(buffer, BUFFER_LENGTH,
         names, wins, losses,
-        average_kills, average_deaths, average_assists,
+        average_kills, average_deaths,
+        average_assists,
         NUM_CHAMPS);
 
     read_match_history(buffer);
