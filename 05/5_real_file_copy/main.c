@@ -14,10 +14,11 @@ int main(int argc, const char* argv[])
             out = stderr;
         }
         
-        fprintf(out, "+--------------------------------+\n");
-        fprintf(out, "|       New File Copier v1       +\n");
-        fprintf(out, "+--------------------------------+\n");
+        fprintf(out, "+--------------------------------------+\n");
+        fprintf(out, "|          New File Copier v1          +\n");
+        fprintf(out, "+--------------------------------------+\n");
         fprintf(out, "  usage: copy <src> <dst>\n");
+        fprintf(out, "  usage: copy --help to see help page");
 
         if (out == stderr) {
             fprintf(out, "\nerror: invalid arguments\n");
