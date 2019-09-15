@@ -16,9 +16,9 @@ void write_match_history(char* buffer,
 {
     char line[LINE_LENGTH];
     size_t i;
-    size_t remaining_buffer_bytes;
+    size_t remaining_buffer_size;
 
-    remaining_buffer_bytes = buffer_size - 1;
+    remaining_buffer_size = buffer_size - 1;
     buffer[0] = '\0';
 
     for (i = 0; i < count; ++i) {
@@ -30,13 +30,13 @@ void write_match_history(char* buffer,
             wins[i], losses[i]);
 
         num_written = strlen(line);
-        if (num_written > remaining_buffer_bytes) {
+        if (num_written > remaining_buffer_size) {
             break;
         }
 
         strcpy(buffer, line);
         buffer += num_written;
-        remaining_buffer_bytes -= num_written;
+        remaining_buffer_size -= num_written;
     }
 }
 
