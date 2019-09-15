@@ -14,7 +14,7 @@ void print_with_repeats(const char* filename)
     int c;
     FILE* file;
 
-    file = fopen(filename, "rb");
+    file = fopen(filename, "r");
     if (file == NULL) {
         perror("error while opening");
         return;
