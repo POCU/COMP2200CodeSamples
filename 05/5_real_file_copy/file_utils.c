@@ -4,36 +4,36 @@
 
 #include "file_utils.h"
 
-void copy_file(const char* src_filename, const char* dst_filename)
+void copy_file(const char* src, const char* dst)
 {
-    FILE* src;
-    FILE* dst;
+    FILE* src_file;
+    FILE* dst_file;
     int c;
 
-    src = fopen(src_filename, "rb");
-    if (src == NULL) {
+    src_file = fopen(src, "rb");
+    if (src_file == NULL) {
         perror("error while opening source file");
         return;
     }
 
-    dst = fopen(dst_filename, "wb");
-    if (dst == NULL) {
+    dst_file = fopen(dst, "wb");
+    if (dst_file == NULL) {
         perror("error while creating target file");
         goto close_source;
     }
 
-    c = fgetc(src);
+    c = fgetc(src_file);
     while (c != EOF) {
-        fputc(c, dst);
-        c = fgetc(src);
+        fputc(c, dst_file);
+        c = fgetc(src_file);
     }
 
-    if (fclose(dst) == EOF) {
+    if (fclose(dst_file) == EOF) {
         perror("error while closing target file");
     }
 
 close_source:
-    if (fclose(src) == EOF) {
+    if (fclose(src_file) == EOF) {
         perror("error while closing source file");
     }
 }
