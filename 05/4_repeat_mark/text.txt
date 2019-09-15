@@ -1,0 +1,8 @@
+Things you should study
+1. Hello World!
+2. C#
+3. Java:
+4. Math
+5. C: 
+6. :Pointer:
+7. How to pat a cat
