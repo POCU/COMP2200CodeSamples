@@ -37,11 +37,9 @@ void print_with_repeats(const char* filename)
 				}
 			} else {
                 /* end mark */
-                long to_jump = pos;
-                pos = ftell(file);
                 repeating = TRUE;
              
-                if (fseek(file, to_jump, SEEK_SET) != 0) {
+                if (fseek(file, pos, SEEK_SET) != 0) {
                     perror("error while fseek() to start position");
                     break;
                 }
@@ -52,10 +50,6 @@ void print_with_repeats(const char* filename)
 
         /* revisited end mark */
         repeating = FALSE;
-        if (fseek(file, pos, SEEK_SET) != 0) {
-            perror("error while fseek() to end position");
-            break;
-        }
         pos = -1;
 
 next_char:
