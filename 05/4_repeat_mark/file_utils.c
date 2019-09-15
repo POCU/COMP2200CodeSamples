@@ -27,24 +27,24 @@ void print_with_repeats(const char* filename)
             goto next_char;
         }
 
-		if (!repeating) {
-			if (pos < 0) {
+        if (!repeating) {
+            if (pos < 0) {
                 /* start mark */
-				pos = ftell(file);
-				if (pos < 0) {
-					perror("error while getting start position");
-					break;
-				}
-			} else {
+                pos = ftell(file);
+                if (pos < 0) {
+                    perror("error while getting start position");
+                    break;
+                }
+            } else {
                 /* end mark */
                 repeating = TRUE;
-             
+                
                 if (fseek(file, pos, SEEK_SET) != 0) {
                     perror("error while fseek() to start position");
                     break;
                 }
             }
-
+                
             goto next_char;
 		}
 
