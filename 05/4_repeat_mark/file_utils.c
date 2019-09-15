@@ -7,7 +7,7 @@
 #define TRUE (1)
 #define FALSE (0)
 
-void print_with_repeats(const char*  filename)
+void print_with_repeats(const char* filename)
 {
     long pos = -1L;
     int repeating = FALSE;
