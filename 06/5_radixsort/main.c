@@ -69,8 +69,8 @@ int main(void)
 
         users[i].sort_key = inv_age << 2 | sex;
     }
-    qsort(users, NUM_USERS, sizeof(radix_userdata_t), compare_uint);
 
+    qsort(users, NUM_USERS, sizeof(radix_userdata_t), compare_uint);
     for (i = 0; i < NUM_USERS; ++i) {
         printf("age: %3d, sex: %d, id: %d\n",
             users[i].user.age,
