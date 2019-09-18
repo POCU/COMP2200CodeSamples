@@ -61,7 +61,7 @@ int main(void)
     }
 
     puts("\n== sort by age(desc), sex ==");
-    assert(SEX_UNKNOWN <= (1 << 2));
+    assert(SEX_UNKNOWN < (1 << 2));
 
     for (i = 0; i < NUM_USERS; ++i) {
         unsigned char inv_age = 255 - users[i].user.age;
