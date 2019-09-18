@@ -51,13 +51,13 @@ int main(void)
             users[i].age, users[i].id, users[i].sex);
     }
 
-    qsort(users, NUM_USERS, sizeof(userdata_t), compare_age_desc_sex);
     puts("\n== sort by age(desc), sex ==");
+    
+    qsort(users, NUM_USERS, sizeof(userdata_t), compare_age_desc_sex);
     for (i = 0; i < NUM_USERS; ++i) {
         printf("age: %3d, sex: %d, id: %d\n",
             users[i].age, users[i].sex, users[i].id);
     }
-
 
     return 0;
 }
