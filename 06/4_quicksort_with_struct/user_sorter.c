@@ -23,7 +23,4 @@ int compare_age_desc_sex(const void* p0, const void* p1)
     }
 
     return user1->age - user0->age;
-
 }
-
-
