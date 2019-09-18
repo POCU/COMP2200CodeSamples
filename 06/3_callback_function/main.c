@@ -54,6 +54,10 @@ int run(void)
         return FALSE;
     }
 
+    printf("%d / %d = %.2f\n",
+        numerator, denominator,
+        numerator / (float)denominator );
+
     return TRUE;
 }
 
