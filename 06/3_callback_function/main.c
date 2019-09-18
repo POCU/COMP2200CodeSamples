@@ -17,7 +17,6 @@ int main(void)
     success = run();
 
     register_error_handler(default_error_handler);
-    
     if (run() == FALSE) {
         success = FALSE;
     }
