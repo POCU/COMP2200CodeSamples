@@ -38,7 +38,7 @@ int main(void)
         rect.top_left.x, rect.top_left.y,
         rect.bottom_right.x, rect.bottom_right.y);
 
-    rect = build_rectangle(p0, p1);
+    rect = build_rectangle(p1, p0);
     printf("rect1: (%d, %d) (%d, %d)\n",
         rect.top_left.x, rect.top_left.y,
         rect.bottom_right.x, rect.bottom_right.y);
