@@ -7,4 +7,3 @@ void log_error(const char* msg);
 void default_error_handler(const char* msg);
 
 #endif /* ERROR_HANDLER_H */
-
