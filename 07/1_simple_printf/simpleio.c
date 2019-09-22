@@ -23,7 +23,7 @@ void printf_simple(const char* format, ...)
             int val;
             const char* str;
 
-            switch(*format) {
+            switch (*format) {
                 case 's':
                     str = va_arg(ap, const char*);
                     while (*str != '\0') {
