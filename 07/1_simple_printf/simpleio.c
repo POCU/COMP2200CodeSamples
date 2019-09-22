@@ -20,7 +20,7 @@ void printf_simple(const char* format, ...)
     va_start(ap, format);
     {
         while (*format != '\0') {
-            int val;
+            unsigned val;
             const char* str;
 
             switch (*format) {
@@ -31,11 +31,11 @@ void printf_simple(const char* format, ...)
                     }
                     break;
                 case 'c':
-                    val = va_arg(ap, int);
+                    val = va_arg(ap, unsigned int);
                     putchar(val);
                     break;
                 case 'd':
-                    val = va_arg(ap, int);
+                    val = va_arg(ap, unsigned int);
                     print_int_recursive(val);
                     break;
                 default:
