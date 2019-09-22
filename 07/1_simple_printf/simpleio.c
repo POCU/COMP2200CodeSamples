@@ -4,7 +4,8 @@
 
 #include "simpleio.h"
 
-static void print_int_recursive(int val) {
+static void print_int_recursive(int val)
+{
     if (val == 0) {
         return;
     }
