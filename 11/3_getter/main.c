@@ -4,7 +4,6 @@
 #define MONSTER_STRUCT \
 	MONSTER_MEMBER(int,           id)    \
     MONSTER_MEMBER(const char*,   name)  \
-    MONSTER_MEMBER(unsigned char, level) \
     MONSTER_MEMBER(int,           hp)    \
 
 typedef struct {
@@ -27,13 +26,11 @@ int main(void)
 {
     monster_t mob;
     mob.id = 0;
-    mob.level = 3;
     mob.name = "Pope Mob";
     mob.hp = 10001;
 
-    printf("%3d %3d %6d %s\n",
+    printf("%3d %6d %s\n",
         get_mob_id(&mob),
-        get_mob_level(&mob),
         get_mob_hp(&mob),
         get_mob_name(&mob));
 
