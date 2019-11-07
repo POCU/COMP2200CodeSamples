@@ -2,7 +2,7 @@
 
 /* (type, name) */
 #define MONSTER_STRUCT \
-	MONSTER_MEMBER(int,           id)    \
+    MONSTER_MEMBER(int,           id)    \
     MONSTER_MEMBER(const char*,   name)  \
     MONSTER_MEMBER(int,           hp)    \
 
