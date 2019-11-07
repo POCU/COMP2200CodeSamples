@@ -11,29 +11,29 @@ int main(void)
 {
     size_t i;
 
-#define MONSTER_ENTRY(id, name, level, hp) id,
     int ids[] = {
+#define MONSTER_ENTRY(id, name, level, hp) id,
         MONSTER_DATA
-    };
 #undef MONSTER_ENTRY
+    };
 
-#define MONSTER_ENTRY(id, name, level, hp) name,
     const char* names[] = {
+#define MONSTER_ENTRY(id, name, level, hp) name,
         MONSTER_DATA
-    };
 #undef MONSTER_ENTRY
+    };
 
-#define MONSTER_ENTRY(id, name, level, hp) level,
     unsigned char levels[] = {
+#define MONSTER_ENTRY(id, name, level, hp) level,
         MONSTER_DATA
-    };
 #undef MONSTER_ENTRY
+    };
 
-#define MONSTER_ENTRY(id, name, level, hp) hp,
     int healths[] = {
+#define MONSTER_ENTRY(id, name, level, hp) hp,
         MONSTER_DATA
-    };
 #undef MONSTER_ENTRY
+    };
 
     for (i = 0; i < sizeof(ids) / sizeof(int); ++i) {
         printf("%3d %3d %6d %s\n",

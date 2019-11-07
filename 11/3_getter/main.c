@@ -7,11 +7,11 @@
     MONSTER_MEMBER(unsigned char,   level) \
     MONSTER_MEMBER(int,             hp)    \
 
-#define MONSTER_MEMBER(type, name) type name;
 typedef struct {
+#define MONSTER_MEMBER(type, name) type name;
     MONSTER_STRUCT
-} monster_t;
 #undef MONSTER_MEMBER
+} monster_t;
 
 #define MONSTER_MEMBER(type, name)          \
 type get_mob_##name(const monster_t* mob)   \
