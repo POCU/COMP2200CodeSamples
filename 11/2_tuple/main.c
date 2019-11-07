@@ -2,10 +2,10 @@
 
 /* id(int), "name"(const char*), level(unsigned char), hp(int) */
 #define MONSTER_DATA \
-	MONSTER_ENTRY(0, "pope",        1,      100)   \
-    MONSTER_ENTRY(1, "sewer rat",   2,      30)    \
-    MONSTER_ENTRY(2, "mama",        10,     255)   \
-    MONSTER_ENTRY(3, "fire dragon", 250,    300000)\
+	MONSTER_ENTRY(0, "pope",    1,   100)   \
+    MONSTER_ENTRY(1, "big rat", 2,   30)    \
+    MONSTER_ENTRY(2, "mama",    10,  255)   \
+    MONSTER_ENTRY(3, "dragon",  250, 300000)\
 
 int main(void)
 {

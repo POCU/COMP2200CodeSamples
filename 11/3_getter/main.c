@@ -2,10 +2,10 @@
 
 /* (type, name) */
 #define MONSTER_STRUCT \
-	MONSTER_MEMBER(int,             id)    \
-    MONSTER_MEMBER(const char*,     name)  \
-    MONSTER_MEMBER(unsigned char,   level) \
-    MONSTER_MEMBER(int,             hp)    \
+	MONSTER_MEMBER(int,           id)    \
+    MONSTER_MEMBER(const char*,   name)  \
+    MONSTER_MEMBER(unsigned char, level) \
+    MONSTER_MEMBER(int,           hp)    \
 
 typedef struct {
 #define MONSTER_MEMBER(type, name) type name;
@@ -13,11 +13,11 @@ typedef struct {
 #undef MONSTER_MEMBER
 } monster_t;
 
-#define MONSTER_MEMBER(type, name)          \
-type get_mob_##name(const monster_t* mob)   \
-{                                           \
-    return mob->name;                       \
-}                                           \
+#define MONSTER_MEMBER(type, name)       \
+type get_mob_##name(const monster_t* mob)\
+{                                        \
+    return mob->name;                    \
+}                                        \
 
 MONSTER_STRUCT
 
