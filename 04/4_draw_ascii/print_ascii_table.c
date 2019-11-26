@@ -4,24 +4,30 @@
 
 void print_ascii_table(void)
 {
-    const char MIN_PRINTABLE_ASCII = 32;
-    const char NUM_ROWS = 31;
-    const char COL_CHAR_OFFSET = 32;
+    const int MIN_ASCII = 32;
+    const int MAX_ASCII = 126;
+    const int NUM_CHARS = MAX_ASCII - MIN_ASCII + 1;
+    const int NUM_COLS = 3;
+    const int NUM_ROWS = (NUM_CHARS + NUM_COLS - 1) / NUM_COLS;
 
-    char i;
+    int r;
+    int ch;
 
-    printf("Dec Hex  Char\t");
-    printf("Dec Hex  Char\t");
-    printf("Dec Hex  Char\n");
+    printf("Dec Hex  Char\tDec Hex  Char\tDec Hex  Char\n");
 
-    for (i = 0; i < NUM_ROWS; ++i) {
-        char ch = i + MIN_PRINTABLE_ASCII;
+    for (r = 0; r < NUM_ROWS - 1; ++r) {
+        ch = MIN_ASCII + r;
         printf("%03d %#X %c\t", ch, ch, ch);
 
-        ch += COL_CHAR_OFFSET;
+        ch += NUM_ROWS;
         printf("%03d %#X %c\t", ch, ch, ch);
 
-        ch += COL_CHAR_OFFSET;
+        ch += NUM_ROWS;
         printf("%03d %#X %c\n", ch, ch, ch);
+    }
+
+    /* last row doesn't have all columns */
+    for (ch = MIN_ASCII + r; ch <= MAX_ASCII; ch += NUM_ROWS) {
+        printf("%03d %#X %c\t", ch, ch, ch);
     }
 }
