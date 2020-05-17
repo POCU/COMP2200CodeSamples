@@ -49,7 +49,7 @@ int run(void)
     }
 
     if (denominator == 0) {
-        log_error("cannot dividy by zero");
+        log_error("cannot divide by zero");
         return FALSE;
     }
 
