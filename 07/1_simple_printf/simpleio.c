@@ -4,18 +4,23 @@
 
 #include "simpleio.h"
 
-static void print_int_recursive(unsigned int val, unsigned int depth)
+static void print_int_recursive(unsigned int val)
 {
-    if (val == 0 && depth == 0) {
-        putchar('0');
-    }
-
     if (val == 0) {
         return;
     }
 
-    print_int_recursive(val / 10, depth + 1);
+    print_int_recursive(val / 10);
     putchar('0' + val % 10);
+}
+
+static void print_int(unsigned int val) {
+    if (val == 0) {
+        putchar('0');
+        return;
+    }
+
+    print_int_recursive(val);
 }
 
 void printf_simple(const char* format, ...)
@@ -41,7 +46,7 @@ void printf_simple(const char* format, ...)
                     break;
                 case 'd':
                     val = va_arg(ap, unsigned int);
-                    print_int_recursive(val, 0);
+                    print_int(val);
                     break;
                 default:
                     putchar(*format);
