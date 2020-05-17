@@ -6,13 +6,13 @@
 
 static void print_int_recursive(unsigned int val, unsigned int depth)
 {
-	if (val == 0 && depth == 0) {
-		putchar('0');
-	}
+    if (val == 0 && depth == 0) {
+        putchar('0');
+    }
 
-	if (val == 0) {
-		return;
-	}
+    if (val == 0) {
+        return;
+    }
 
     print_int_recursive(val / 10, depth + 1);
     putchar('0' + val % 10);
