@@ -10,8 +10,8 @@ int main(void)
         average += grades[i];	
     }
     average /= i;
-	
-    printf("Average: %d\n", average); 
+
+    printf("Average: %d\n", average);
 
     return 0;
 }
