@@ -22,7 +22,7 @@ int main(void)
     enum role my_role = ROLE_BOTTOM;
 
     printf("my_champ: %d\n", my_champ);
-    printf("my_role: %d\n", my_role);    
+    printf("my_role: %d\n", my_role);
     printf("\n");
 
     my_role = CHAMP_LEESIN;

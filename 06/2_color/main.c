@@ -7,9 +7,9 @@ int main(void)
     color_t trans_black;
     color_t red;
     color_t yellow;
-    
+
     trans_black.val = 0x0;
-    
+
     red.val = 0;
     red.rgba.r = 255;
     red.rgba.a = 255;

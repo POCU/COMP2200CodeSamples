@@ -8,11 +8,11 @@ int main(void)
         { 72, 53, 41, 88, 69 }
     };
     const int* nums2[3];
-    
+
     nums2[0] = nums[0];
     nums2[1] = nums[1];
     nums2[2] = nums[2];
-    
+
     printf("nums[0] address: %p\n", (void*)nums[0]);
     printf("nums[1] address: %p\n", (void*)nums[1]);
     printf("nums[2] address: %p\n", (void*)nums[2]);
@@ -20,7 +20,7 @@ int main(void)
     printf("nums[1]'s offset from nums[0]: %d\n", nums[1] - nums[0]);         /* 5 */
     
     printf("\n");
-    
+
     printf("nums2[0] address: %p\n", (void*)&nums2[0]);
     printf("nums2[1] address: %p\n", (void*)&nums2[1]);
     printf("nums2[2] address: %p\n", (void*)&nums2[2]);

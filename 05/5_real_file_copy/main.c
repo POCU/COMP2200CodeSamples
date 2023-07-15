@@ -7,13 +7,13 @@ int main(int argc, const char* argv[])
 {
     if (argc != 3) {
         FILE* out;
-        
+
         if (argc == 2 && strcmp(argv[1], "--help") == 0) {
             out = stdout;
         } else {
             out = stderr;
         }
-        
+
         fprintf(out, "+--------------------------------------+\n");
         fprintf(out, "|          New File Copier v1          +\n");
         fprintf(out, "+--------------------------------------+\n");

@@ -19,13 +19,13 @@ int main(void)
 
     hash = hash_int(10);
     printf("int    %u\n", hash);
-    
+
     hash = hash_int(-10);
     printf("int    %u\n", hash);
-    
+
     hash = hash_int('A');
     printf("char   %u\n", hash);
-    
+
     hash = hash_float(3.2f);
     printf("float  %u\n", hash);
 

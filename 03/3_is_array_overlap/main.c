@@ -9,7 +9,7 @@ int main(void)
     int* nums3 = nums1 + 2;
     const size_t NUMS3_LENGTH = 5u;
     char* result = NULL;
-    
+
     result = is_overlap(nums1, ARRAY_LENGTH(nums1), nums2, ARRAY_LENGTH(nums2))
         ? "Yes" : "No";
     printf("Are nums1 and nums2 overlapped?: %s\n", result);
