@@ -44,7 +44,7 @@ void print_with_repeats(const char* filename)
                     break;
                 }
             }
-                
+
             goto next_char;
 		}
 

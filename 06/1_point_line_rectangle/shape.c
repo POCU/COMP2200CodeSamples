@@ -13,7 +13,7 @@ rectangle_t build_rectangle(point_t p0, point_t p1)
         rect.top_left.x = p1.x;
         rect.bottom_right.x = p0.x;
     }
-    
+
     if (p0.y < p1.y) {
         rect.top_left.y = p0.y;
         rect.bottom_right.y = p1.y;

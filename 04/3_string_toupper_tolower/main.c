@@ -11,7 +11,7 @@ int main(void)
 
     printf("m in uppercase: %c\n", to_upper('m'));     /* M */
     printf("W in lowercase: %c\n", to_lower('W'));     /* w */
-    
+
     string_toupper(str);
     printf("Uppercase: %s\n", str);                    /* WELCOME TO C */
 

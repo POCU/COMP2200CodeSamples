@@ -70,7 +70,7 @@ void read_match_history(char* buffer)
 
         kda = (kills + assists) / deaths;
         win_ratio = wins  * 100.0f / (wins + losses);
-        
+
         printf("%8s %7.2f %7.2f %7.2f %7.2f %6d %6d %8.2f%%\n",
             name, kills, deaths, assists,
             kda, wins, losses, win_ratio);

@@ -17,7 +17,7 @@ begin_loop:
         result *= i;
         ++i;
     }
-
+    
     goto exit_loop;
 }
 
