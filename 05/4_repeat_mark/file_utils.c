@@ -46,7 +46,7 @@ void print_with_repeats(const char* filename)
             }
 
             goto next_char;
-		}
+        }
 
         /* revisited end mark */
         repeating = FALSE;
