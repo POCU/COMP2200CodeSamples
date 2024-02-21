@@ -7,7 +7,7 @@ int main(void)
     int i;
 
     for (i = 0; i < 5; ++i) {
-        average += grades[i];	
+        average += grades[i];
     }
     average /= i;
 
