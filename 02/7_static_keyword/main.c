@@ -10,7 +10,7 @@ extern void set_fee(const unsigned int fee);
 int main(void)
 {
     printf("g_chequing: %u\n", g_chequing);     /* 0 */
-    printf("s_saving: %u\n", g_saving);         /* 0 */
+    printf("g_saving: %u\n", g_saving);         /* 0 */
     /* this is a linker error */
     /*printf("s_fee: %u", s_fee);*/             /* 20 */
 
@@ -20,7 +20,7 @@ int main(void)
     /*set_fee(100);*/
 
     printf("g_chequing: %u\n", g_chequing);     /* 280 */
-    printf("s_saving: %u\n", g_saving);         /* 680 */
+    printf("g_saving: %u\n", g_saving);         /* 680 */
     /* this a linker error */
     /*printf("s_fee: %u", s_fee);*/             /* 100 */
 
