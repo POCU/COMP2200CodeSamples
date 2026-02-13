@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "vector.h"
 
 void add_vec3(const int* v1, const int* v2, int* out_v3)
